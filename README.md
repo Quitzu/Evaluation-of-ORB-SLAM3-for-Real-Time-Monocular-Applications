@@ -59,8 +59,10 @@ ORB-SLAM3 was not modified. The focus of this project is experimental evaluation
 ---
 
 ## Results (Example)
+The main tests were made in this 3.5 x 7.5 m large testing room.
 ![main](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/bild_flur.jpg)
-![main2](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_720.png)
+![high](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_1440.png)
+![low](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_720.png)
 
 | Resolution | Avg. Tracking Time | MapPoints | Tracking Stability |
 |------------|-------------------|-----------|--------------------|
