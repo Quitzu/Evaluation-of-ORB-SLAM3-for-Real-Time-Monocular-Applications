@@ -105,5 +105,5 @@ To start ORB-SLAM:
 ./Examples/Monocular/mono_tum \
 Vocabulary/ORBvoc.txt \
 directory/to/scripts/iphone12    #use the camerafile according to the camera and resolution used \
-~/Datasets/my_datasets/videoXX
+~/directory/to/video-folder
 ```
