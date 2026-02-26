@@ -71,6 +71,7 @@ The second test with a medium resolution of 720x960. I had to tweek the ORB-feat
 | High       | double the record  | Stable             |
 | Medium     | ~real-time         | Most stable        |
 
+![dark](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/livebild_flur_720_dunkel.png)
 ---
 
 ## Observations
