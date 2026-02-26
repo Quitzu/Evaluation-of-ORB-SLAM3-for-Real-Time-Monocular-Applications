@@ -110,7 +110,7 @@ To start ORB-SLAM:
 ```bash
 ./Examples/Monocular/mono_tum \
 Vocabulary/ORBvoc.txt \
-path/to/scripts/iphone12    #use the camerafile according to the camera and resolution used \
+path/to/scripts/iphone12 \   #use the camerafile according to the camera and resolution used 
 path/to/video-folder
 ```
 
