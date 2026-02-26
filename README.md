@@ -71,15 +71,15 @@ The second test with a medium resolution of 720x960. I had to tweek the ORB-feat
 | High       | double the record  | Stable             |
 | Medium     | ~real-time         | Most stable        |
 
+But what about bad lighting?
+As you can see in the next picture, with bad lighting the algorithm has no real chance: there are much less map points and they are all over the place. And right after the frame shown in the image, the algorithm loses tracking and resets the map!
 ![dark](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/livebild_flur_720_dunkel.png)
 ---
 
-## Observations
+## Conclusion
 
-- Medium resolution achieved the best balance between runtime and stability.
-- Lower resolution reduced computational cost but increased tracking loss.
-- Poor lighting significantly reduced feature detection and MapPoint density.
-- MapPoint growth correlates with scene structure richness.
+ORB-SLAM3 is a high-quality tool, that can be used for real-time Mono-SLAM purposes. However
+performance degrades strongly under poor lighting and rapid motion. Tracking failures result in the creation of a new map, limiting long-term stability. It’s current best use case is mid-range offline processing.
 
 ---
 
@@ -88,7 +88,6 @@ The second test with a medium resolution of 720x960. I had to tweek the ORB-feat
 - No ground truth available
 - Limited number of test sequences
 - No real-time evaluation
-- Only monocular configuration tested
 
 ---
 
@@ -97,4 +96,14 @@ The second test with a medium resolution of 720x960. I had to tweek the ORB-feat
 To prepare a dataset:
 
 ```bash
-./scripts/prepare_sequence.sh video.mp4 960 540 30
+./scripts/prepare_sequence.sh directory/to/video.mp4 720 960 30
+```
+
+To start ORB-SLAM:
+
+```bash
+./Examples/Monocular/mono_tum \
+Vocabulary/ORBvoc.txt \
+directory/to/scripts/iphone12    #use the camerafile according to the camera and resolution used \
+~/Datasets/my_datasets/videoXX
+```
