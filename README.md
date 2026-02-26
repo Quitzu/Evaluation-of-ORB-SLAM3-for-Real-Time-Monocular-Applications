@@ -93,10 +93,16 @@ performance degrades strongly under poor lighting and rapid motion. Tracking fai
 
 ## Reproducibility
 
+First download [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3). Then pull the sources folder and run the code:
+
+```bash
+chmod +x scripts/prepare_sequence.sh
+```
+
 To prepare a dataset:
 
 ```bash
-./scripts/prepare_sequence.sh directory/to/video.mp4 720 960 30
+./scripts/prepare_sequence.sh directory/to/video.mp4 720 960 30  # for res: 720x960
 ```
 
 To start ORB-SLAM:
@@ -104,6 +110,15 @@ To start ORB-SLAM:
 ```bash
 ./Examples/Monocular/mono_tum \
 Vocabulary/ORBvoc.txt \
-directory/to/scripts/iphone12    #use the camerafile according to the camera and resolution used \
-~/directory/to/video-folder
+path/to/scripts/iphone12    #use the camerafile according to the camera and resolution used \
+path/to/video-folder
+```
+
+If you have a groundtruth, you can download evo and evaluate with:
+
+```bash
+evo_ape tum \
+path/to/groundtruth.txt \
+KeyFrameTrajectory.txt \
+--align --plot
 ```
