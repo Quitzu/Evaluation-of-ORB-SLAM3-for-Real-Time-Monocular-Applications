@@ -60,6 +60,7 @@ ORB-SLAM3 was not modified. The focus of this project is experimental evaluation
 
 ## Results (Example)
 ![main](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/bild_flur.HEIC?raw=true)
+![main2](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_720.png)
 
 | Resolution | Avg. Tracking Time | MapPoints | Tracking Stability |
 |------------|-------------------|-----------|--------------------|
