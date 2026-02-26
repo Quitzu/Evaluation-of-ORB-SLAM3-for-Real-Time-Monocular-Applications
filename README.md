@@ -1,6 +1,6 @@
-# Evaluation of ORB-SLAM3 for Real-Time Monocular Applications
+# Evaluation of [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) for Real-Time Monocular Applications
 ## Overview
-This project evaluates the performance and processing time of ORB-SLAM3 in different indoor scenarios with varying lighting conditions and image resolutions.
+This project evaluates the performance and processing time of [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) in different indoor scenarios with varying lighting conditions and image resolutions.
 
 The focus is on:
 - Tracking stability
@@ -17,11 +17,11 @@ No ground truth was used. The evaluation is based on internal SLAM metrics.
 
 This project uses:
 
-- ORB-SLAM3 (monocular mode)
+- [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) (monocular mode)
 - Custom preprocessing scripts for video preparation
 - TUM-style dataset format
 
-ORB-SLAM3 was not modified. The focus of this project is experimental evaluation.
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) was not modified. The focus of this project is experimental evaluation.
 
 ---
 
@@ -59,11 +59,11 @@ ORB-SLAM3 was not modified. The focus of this project is experimental evaluation
 ---
 
 ## Results (Example)
-The main tests were made in this 3.5 x 7.5 m large testing room. The test video for the upcoming pictures was 45 seconds long and was a slow walk through the corridor a turn and a slow walk back. The video started and ended at the door on the right and was done with normal lighting.
+The primary experiments were conducted in a testing room measuring 3.5 × 7.5 meters. The test video corresponding to the subsequent figures was 45 seconds in duration and consisted of a slow walk along the corridor, a turn, and a slow return. The video commenced and concluded at the door on the right-hand side and was recorded under standard lighting conditions.
 ![main](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/bild_flur.jpg)
-The first test was done with the original resolution of 1440x1920. The tracking went pretty well and precise, as you can clearly see straight outlines and a good representation of the whole corridor. But it's aswell not perfect, there are a couple of outliers in the map and some rather clear spots. The algorithm took 90 seconds for processing, which is far from real-time!
+The first experiment was done with the original resolution of 1440x1920 pixels. The tracking went pretty well and precise, as you can clearly see straight outlines and a good representation of the whole corridor. But it's aswell not perfect, there are a couple of outliers in the map and some rather clear spots. The algorithm took 90 seconds for processing, which is far from real-time!
 ![high](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_1440.png)
-The second test with a medium resolution of 720x960. I had to tweek the ORB-features for this one a little bit, it takes more and worse Keypoints, as it would otherwise lose track at some point. As shown in the next picture the tracking wasn't bad either, there are a couple more outliers and the outlines aren't as straight anymore, but the trajectory looks almost the same. With the algorithm only taking 48 seconds this could reach real-time with some more tweaking.
+The second experiment utilized a medium resolution of 720x960 pixels. I had to tweek the ORB-features for this one a little bit, resulting in a greater number of, but lower-quality, keypoints; as it would otherwise lose track at some point. As shown in the next picture the tracking wasn't bad either, there are a couple more outliers and the outlines aren't as straight anymore, but the trajectory looks almost the same. With the algorithm only taking 48 seconds this could reach real-time with some more tweaking.
 ![low](https://github.com/Quitzu/Evaluation-of-ORB-SLAM3-for-Real-Time-Monocular-Applications/blob/main/map_flur_720.png)
 
 | Resolution | Avg. Tracking Time | Tracking Stability |
